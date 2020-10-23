@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+    <header id="navbar" class="fixed-top ">
+        <div class="container ">
+            <nav class="navbar-brand ">
+               <img  src="assets/img/logo3.png"><img  src="assets/img/tittle.png">
+            </nav>
+            
+        </div>
+    </header>
+       <br>
+       <br>
+       <div class="container-fluid">
+        <h1 class="heading" >MOTOR CONTROLLER DATA</h1>
+        <br>
+           <div class="split">
+               <div class="valueBox" >
+                   <p>SPEED (Km/h)</p>
+                   <h1 id="speed"></h1>
+               </div>
+               <div class="valueBox">
+                   <p>RPM</p>
+                   <h1 id="rpm"></h1>
+               </div>
+               <div class="valueBox">
+                   <p>TEMPERATURE (&#8451;)</p>
+                   <h1 id="temperature"></h1>
+               </div>
+               <div class="valueBox">
+                   <p>VOLTAGE (V) </p>
+                   <h1 id="voltage"></h1>
+               </div>
+               <div class="valueBox">
+                   <p>CURRENT (A)</p>
+                   <h1 id="current"></h1>
+               </div>
+               
+           </div>
+       </div>
+
+       <div class="container">
+           <br>
+        <h1 class="heading" >INDIVIDUAL CELL VOLTAGE (in V)</h1>
+        <br>
+        <table class="table table-dark table-striped table-bordered">
+          <tbody>
+            <tr>
+                <td id="b1"></td>
+                <td id="b2"></td>
+                <td id="b3"></td>
+                <td id="b4"></td>
+                <td id="b5"></td>
+            </tr>
+            <tr>
+                <td id="b6"></td>
+                <td id="b7"></td>
+                <td id="b8"></td>
+                <td id="b9"></td>
+                <td id="b10"></td>
+            </tr>
+            <tr>
+                <td id="b11"></td>
+                <td id="b12"></td>
+                <td id="b13"></td>
+                <td id="b14"></td>
+                <td id="b15"></td>
+            </tr>
+            <tr>
+                <td id="b16"></td>
+                <td id="b17"></td>
+                <td id="b18"></td>
+                <td id="b19"></td>
+                <td id="b20"></td>
+            </tr>
+            <tr>
+                <td id="b21"></td>
+                <td id="b22"></td>
+                <td id="b23"></td>
+                <td id="b24"></td>
+                <td id="b25"></td>
+            </tr>
+            <tr>
+                <td id="b26"></td>
+                <td id="b27"></td>
+                <td id="b28"></td>
+                <td id="b29"></td>
+                <td id="b30"></td>
+            </tr>
+            
+          </tbody>
+        </table>
+       </div> 
+
+       <div class="container">
+           <br>
+           <h1 class="heading" >BATTERY TEMPERATURE (&#8451;)</h1> 
+           <br>
+           <table class="table table-dark table-striped table-bordered">
+            <tbody>
+              <tr>
+                  <td id="t1"></td>
+                  <td id="t2"></td>
+                  <td id="t3"></td>
+                  <td id="t4"></td>
+                  <td id="t5"></td>
+                  <td id="t6"></td>
+              </tr>
+              <tr>
+                  <td id="t7"></td>
+                  <td id="t8"></td>
+                  <td id="t9"></td>
+                  <td id="t10"></td>
+                  <td id="t11"></td>
+                  <td id="t12"></td>
+              </tr>
+            </tbody>
+            </table>
+
+        
+
+
+       </div>
+
+
+   
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/plotly.min.js"></script>
+    
+    <!--<div class="container">
+        <div id="chart"></div>
+        <script>
+            function getData() {
+                return Math.random();
+            }  
+            Plotly.plot('chart',[{
+                y:[getData()],
+                type:'line',
+                text:'Speed'
+            }]);
+            
+            var cnt = 0;
+            setInterval(function(){
+                Plotly.extendTraces('chart',{ y:[[getData()]]}, [0]);
+                cnt++;
+                if(cnt > 500) {
+                    Plotly.relayout('chart',{
+                        xaxis: {
+                            range: [cnt-500,cnt]
+                        }
+                    });
+                }
+            },1000);
+        </script>
+    </div>-->
+  
+</body>
+</html>

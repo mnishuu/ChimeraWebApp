@@ -9,6 +9,7 @@
   position: sticky;
   top: 0px;
   padding: 10px 0;
+  width: 100vw;
   background-color: black !important;
   box-shadow: seashell;
   z-index: 999;
